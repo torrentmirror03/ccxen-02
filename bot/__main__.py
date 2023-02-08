@@ -43,7 +43,7 @@ def stats(update, context):
             f'<b>Memory Total:</b> {get_readable_file_size(memory.total)}\n'\
             f'<b>Memory Free:</b> {get_readable_file_size(memory.available)}\n'\
             f'<b>Memory Used:</b> {get_readable_file_size(memory.used)}\n\n'\
-            f'<b>Memory Used:</b>\n'
+            f'<b>Bot By: @i_am_msr</b>\n'
     sendMessage(stats, context.bot, update.message)
 
 def start(update, context):
