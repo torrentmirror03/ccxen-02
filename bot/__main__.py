@@ -42,13 +42,14 @@ def stats(update, context):
             f'<b>SWAP:</b> {get_readable_file_size(swap.total)} | <b>Used:</b> {swap.percent}%\n'\
             f'<b>Memory Total:</b> {get_readable_file_size(memory.total)}\n'\
             f'<b>Memory Free:</b> {get_readable_file_size(memory.available)}\n'\
-            f'<b>Memory Used:</b> {get_readable_file_size(memory.used)}\n'
+            f'<b>Memory Used:</b> {get_readable_file_size(memory.used)}\n\n'\
+            f'<b>Memory Used:</b>\n'
     sendMessage(stats, context.bot, update.message)
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.buildbutton("Owner", "https://www.github.com/anasty17")
+    buttons.buildbutton("CCXEN REDIRECT & UPDATES", "https://t.me/i_am_msr")
+    buttons.buildbutton("Owner", "https://t.me/i_am_msr")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
